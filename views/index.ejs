@@ -1,0 +1,11 @@
+<%- include partials/header.ejs %>
+    <div class="gallery">
+        <% for(var i = 0; i < imgs.length; i++) { %>
+            <div class="thumb">
+                <a href="/choose-thumb/<%= [i] %>">
+                    <img src="/image/layer-1/<%= imgs[i] %>">
+                </a>
+            </div>
+        <% } %>
+    </div>
+<%- include partials/footer.ejs %>

@@ -1,0 +1,19 @@
+<%- include partials/header.ejs %>
+    <div class="presentation">
+        <div class="image">
+            <% if (toolId) { %>
+            <img class="tool-layer" src="/image/layer-2/<%= tool %>">
+            <% } %>
+            <img class="image-layer" src="/image/layer-1/<%= img %>">
+        </div>
+        <div class="tools">
+            <% for(var i = 0; i < tools.length; i++) { %>
+                <div class="thumb">
+                    <a href="/choose-thumb/<%= imgId + '/' + i %>/">
+                        <img src="/image/layer-2/<%= tools[i] %>">
+                    </a>
+                </div>
+            <% } %>
+        </div>
+    </div>
+<%- include partials/footer.ejs %>
